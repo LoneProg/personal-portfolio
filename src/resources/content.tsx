@@ -1,15 +1,24 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import {
+  About,
+  Blog,
+  Gallery,
+  Home,
+  Newsletter,
+  Person,
+  Social,
+  Work,
+} from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Haze",
+  lastName: "Crypt",
+  name: `Haze Crypt`,
+  role: "Software Engineer/Fullstack Developer",
+  avatar: "/images/avatar.jpeg",
+  email: "sigmawolf150@gmail.com",
+  location: "Africa/Lagos", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -25,27 +34,33 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/loneprog",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/ismail-yakubu-5a6304311",
     essential: true,
   },
   {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Whatsapp",
+    icon: "whatsapp",
+    link: "https://wa.me/+2349059372883",
     essential: true,
   },
+  // {
+  //   name: "Instagram",
+  //   icon: "instagram",
+  //   link: "https://www.instagram.com/once_ui/",
+  //   essential: false,
+  // },
+  // {
+  //   name: "Threads",
+  //   icon: "threads",
+  //   link: "https://www.threads.com/@once_ui",
+  //   essential: false,
+  // },
   {
     name: "Email",
     icon: "email",
@@ -60,15 +75,15 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building production ready systems.</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">Fullstack Developer</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Systems Focused
         </Text>
       </Row>
     ),
@@ -76,8 +91,10 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I’m Haze. I’m a full-stack developer focused on building modern web
+      applications and backend systems. I work across the stack <br /> from
+      frontend interfaces to APIs, databases, and infrastructure.
+    </>
   ),
 };
 
@@ -95,63 +112,82 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://wa.me/+2349059372883",
   },
   intro: {
     display: true,
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I’m a full-stack developer working with modern JavaScript frameworks and
+        backend systems. My focus is on building clean, scalable applications
+        and understanding how systems work end-to-end — from UI to
+        infrastructure. I’ve worked with tools and technologies across the stack
+        including React, Vue, Next.js, Express, PostgreSQL, MongoDB, Docker, and
+        AWS. Right now, I’m actively building projects, experimenting with
+        architectures, and improving how I design and structure applications. <br />
+        <br />
+        I value: <br />
+        - Clean and maintainable code <br />
+        - Practical system design <br />
+        - Continuous learning through building.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "QZ Platform",
+        timeframe: "2024 — Present",
+        role: "Backend Developer (API & System Design)",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Contributed to the backend architecture of an online assessment platform supporting Admin, Test Creator, and Test Taker roles.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designed and implemented RESTful APIs for authentication, user management, test management, and result processing.
           </>,
+          <>
+            Worked with role-based access control and JWT authentication for secure user sessions.
+          </>,
+          <>
+            Structured backend logic for test creation, question management, and automated result handling.
+          </>,
+          <>
+            Participated in database design using MongoDB, including schema modeling for users, tests, questions, and attempts.
+          </>,
+          <>
+            Assisted in frontend integration by ensuring API consistency and usability across dashboards.
+          </>
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
+            src: "/images/projects/project-01/QZPlatformImage.png",
             alt: "Once UI Project",
             width: 16,
             height: 9,
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
+      // {
+      //   company: "Creativ3",
+      //   timeframe: "2018 - 2022",
+      //   role: "Lead Designer",
+      //   achievements: [
+      //     <>
+      //       Developed a design system that unified the brand across multiple
+      //       platforms, improving design consistency by 40%.
+      //     </>,
+      //     <>
+      //       Led a cross-functional team to launch a new product line,
+      //       contributing to a 15% increase in overall company revenue.
+      //     </>,
+      //   ],
+      //   images: [],
+      // },
     ],
   },
   studies: {
@@ -159,12 +195,12 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Federal University of Abeokuta",
+        description: <>Currently Studying software engineering.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Federal Polytechnic Ilaro",
+        description: <>Studied Computer Science</>,
       },
     ],
   },
@@ -173,60 +209,97 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Technologies & Tools",
+        // description: (
+        //   <>Able to create Frontend Design Using React</>
+        // ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "React",
+            icon: "react",
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
-          {
-            name: "JavaScript",
+            name: "Javascript",
             icon: "javascript",
+          },
+          {
+            name: "Typescript",
+            icon: "typescript",
+          },
+          {
+            name: "Git",
+            icon: "git",
+          },
+          {
+            name: "HTML",
+            icon: "html",
+          },
+          {
+            name: "CSS",
+            icon: "css",
+          },
+                    {
+            name: "Docker",
+            icon: "docker",
+          },
+          {
+            name: "Kubernetes",
+            icon: "kubernetes",
+          },
+          {
+            name: "AWS",
+            icon: "aws",
+          },
+          {
+            name: "Postman",
+            icon: "postman",
           },
           {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "PostgreSQL",
+            icon: "postgresql"
           },
+                    {
+            name: "ExpressJs",
+            icon: "expressjs",
+          },
+          {
+            name: "Node.js",
+            icon: "nodejs",
+          },
+          {
+            name: "MongoDB",
+            icon: "mongodb"
+          },
+          {
+            name: "VScode",
+            icon: "vscode",
+          },
+          {
+            name: "Render",
+            icon: "render"
+          },
+          {
+            name: "Vercel",
+            icon: "vercel",
+          },
+          {
+            name: "Netlify",
+            icon: "netlify",
+          }
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        // images: [
+        //   {
+        //     src: "/images/projects/project-01/QZPlatformImage-two.png",
+        //     alt: "Project image",
+        //     width: 16,
+        //     height: 9,
+        //   },
+        // ],
       },
     ],
   },

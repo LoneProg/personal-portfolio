@@ -12,9 +12,9 @@ import {
   Line,
 } from "@once-ui-system/core";
 import { home, about, person, baseURL, routes } from "@/resources";
-import { Mailchimp } from "@/components";
-import { Projects } from "@/components/work/Projects";
-import { Posts } from "@/components/blog/Posts";
+// import { Mailchimp } from "@/components";
+// import { Projects } from "@/components/work/Projects";
+// import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
   return Meta.generate({
@@ -58,8 +58,7 @@ export default function Home() {
                 paddingY="4"
                 onBackground="neutral-strong"
                 textVariant="label-default-s"
-                arrow={false}
-                href={home.featured.href}
+                arrow={true}
               >
                 <Row paddingY="2">{home.featured.title}</Row>
               </Badge>
@@ -100,7 +99,8 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
-      <RevealFx translateY="16" delay={0.6}>
+      {/* Projects */}
+      {/* <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
       {routes["/blog"] && (
@@ -123,8 +123,9 @@ export default function Home() {
           </Row>
         </Column>
       )}
-      <Projects range={[2]} />
-      <Mailchimp />
+      <Projects range={[2]} /> */}
+      {/* Newsletter */}
+      {/* <Mailchimp /> */}
     </Column>
   );
 }
