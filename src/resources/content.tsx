@@ -219,6 +219,10 @@ const about: About = {
             icon: "react",
           },
           {
+            name: "Vue",
+            icon: "vue",
+          },
+          {
             name: "Javascript",
             icon: "javascript",
           },
