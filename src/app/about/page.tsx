@@ -139,7 +139,13 @@ export default function About() {
                     name="whatsapp"
                     onBackground="brand-weak"
                   />
-                  <Row paddingX="8" className="md:justify-center items-center text-center">Contact Me</Row>
+                  <Row
+                    paddingX="8"
+                    className="items-center text-center"
+                    s={{ horizontal: "center" }}
+                  >
+                    Contact Me
+                  </Row>
                   <IconButton
                     href={about.calendar.link}
                     data-border="rounded"
