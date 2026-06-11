@@ -71,7 +71,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/home.png",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
@@ -87,7 +87,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/qz-platform",
   },
   subline: (
     <>
@@ -166,7 +166,7 @@ const about: About = {
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/QZPlatformImage.png",
-            alt: "Once UI Project",
+            alt: "QZ Platform Project",
             width: 16,
             height: 9,
           },

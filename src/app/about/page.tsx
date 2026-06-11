@@ -119,7 +119,7 @@ export default function About() {
             marginBottom="32"
           >
             {about.calendar.display && (
-              <RevealFx translateY="4" fillWidth paddingBottom="16">
+              <RevealFx translateY="4" fillWidth paddingBottom="16" s={{horizontal:"center"}}>
                 <Row
                   fitWidth
                   border="brand-alpha-medium"
@@ -142,7 +142,6 @@ export default function About() {
                   <Row
                     paddingX="8"
                     className="items-center text-center"
-                    s={{ horizontal: "center" }}
                   >
                     Contact Me
                   </Row>

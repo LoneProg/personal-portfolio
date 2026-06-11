@@ -1,0 +1,60 @@
+---
+title: "Whatsapp Status Increase Application"
+publishedAt: "2026-10-05"
+summary: "Development of a fullstack system for an online contact sharing website, including REST APIs, authentication, Admin Dashboard, and database architecture for saving users and admin data, Admin dashboard to view users data and edit as needed."
+images:
+  - "/images/projects/project-02/https-whatsapp-status-exchange.vercel.app-.png"
+team:
+  - name: "loneprog"
+  - role: "Fullstack Developer"
+  - avatar: "/images/projects/project-02/avatar-loneprog.jfif"
+  - linkedIn: "https://www.linkedin.com/in/ismail-yakubu-5a6304311"
+link: "https://whatsapp-status-exchange.vercel.app/"
+---
+
+## Overview
+
+This website is created to efficiently allow people from different places to get connected on whatsapp with other whatsapp users in other to allow both parties to view each other's status therefore, increasing their maximum views which can be a great help for advertisments and e.t.c, the admin can download the .vcf file to share to the registered users so they can import the contacts into their phone.
+
+I worked on both frontend and backend focusing on Flexibility, scalability, efficency and highly customizability of the website.
+
+## Key Features
+
+- **Frontend Theme**: Implemented light / dark mode themes for users.
+- **Restful API Development**: Built Structured API Endpoints for user management, contacts registration, admin auth, vcf file exporting.
+- **Authentication & Authorization**: Implemented admin login system using JWT.
+
+## Technologies Used
+
+- **Vue.js**: For Building frontend UIs and interaction with users.
+- **REST APIs**: For structured communication between frontend and backend.
+- **Node.js / Express.js**: For Building Backend APIs and handling server-side logic.
+- **Prisma / MySQL**: For database design, migrations and storing data.
+- **JWT(JSON Web Tokens)**: For authentication and session management
+
+## Challenges and Learnings
+
+**Frontend Challenge:** I faced challenges implementing Vue.js reactivity to display real-time updates of the registered user count without requiring page reloads.
+
+**Frontend Solution & Learning:** To solve this, I implemented a Pinia store to manage reactive contact data, fetching the registration count from the API. By using Vue's `computed` properties, I calculated real-time progress metrics based on the store's reactive state, allowing the UI to update automatically whenever the data changed without requiring page reloads. This approach demonstrated the importance of centralized state management for maintaining reactive data flow in Vue.js applications.
+
+**Backend Challenge:** I encountered version-specific Prisma configuration challenges. The DATABASE_URL environment variable wasn't being recognized during Prisma startup, causing migrations and initializations to fail. Prisma doesn't load the .env file by default at startup, and configuration handling differs between versions.
+
+**Backend Solution & Learning:** After testing various configurations between prisma.config.ts and prisma/schema.prisma, I discovered that the latest Prisma version requires explicitly declaring the datasource as `env("DATABASE_URL")` in the schema.prisma file. Additionally, I successfully switched the database adapter from Neon Database/serverless to a local PostgreSQL instance, which required adjusting connection pooling and configuration settings. I also gained practical experience with Docker containerization for backend services and implementing SSL/TLS certificate authentication using PostgreSQL's ca.pem files for secure database connections. These challenges deepened my understanding of environment variable handling, version compatibility, database adapter configuration, and containerization in modern frameworks.
+
+**Deployment Challenge:** Initially, I planned to host the entire application as a unified containerized application using Docker Compose. However, due to limited free hosting options that support this setup, I had to re-architect the deployment strategy.
+
+**Deployment Solution & Learning:** I successfully deployed the application across three separate platforms: Vercel for the frontend, Koyeb for the backend API, and Aiven for the PostgreSQL database. This multi-platform approach required careful configuration of CORS, environment variables, and API endpoints across different hosting providers. While not the original plan, this distributed architecture taught me valuable lessons about cloud infrastructure trade-offs, multi-provider integration, and how cost considerations influence architectural decisions in real-world projects.
+
+## Outcome
+
+The application successfully launched and has been actively used by over 300 users to share and manage their WhatsApp contacts, enabling them to increase their status views and expand their reach. The system has maintained **100% uptime** with zero downtime incidents, demonstrating the robustness of the architecture and deployment strategy across multiple cloud providers.
+
+Key achievements include:
+
+- **300+ Active Users**: Successfully onboarded and retained a growing user base with seamless contact sharing functionality.
+- **Zero Downtime**: The scalable infrastructure handled user load efficiently without service interruptions.
+- **Reliable Contact Distribution**: Users successfully exported and distributed VCF files for contact management.
+- **Production-Ready Performance**: The system proved capable of handling real-world usage patterns and user expectations.
+
+The project has now progressed to its next phase, scaling to support 500 contacts and additional features. This success validates the technical decisions made during development and demonstrates the effectiveness of building for scalability from the outset.
