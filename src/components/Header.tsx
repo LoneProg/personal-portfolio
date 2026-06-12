@@ -126,10 +126,11 @@ export const Header = () => {
                       selected={pathname === "/about"}
                     />
                   </Row>
-                  <Row hide s={{ hide: true }}>
+                  <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon="person"
                       href="/about"
+                      label={about.label}
                       selected={pathname === "/about"}
                     />
                   </Row>
@@ -145,10 +146,11 @@ export const Header = () => {
                       selected={pathname.startsWith("/work")}
                     />
                   </Row>
-                  <Row hide s={{ hide: true }}>
+                  <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon="grid"
                       href="/work"
+                      label={work.label}
                       selected={pathname.startsWith("/work")}
                     />
                   </Row>
@@ -164,7 +166,7 @@ export const Header = () => {
                       selected={pathname.startsWith("/blog")}
                     />
                   </Row>
-                  <Row hide s={{ hide: false }}>
+                  <Row s={{ hide: false }}>
                     <ToggleButton
                       prefixIcon="book"
                       href="/blog"
@@ -183,7 +185,7 @@ export const Header = () => {
                       selected={pathname.startsWith("/gallery")}
                     />
                   </Row>
-                  <Row hide s={{ hide: false }}>
+                  <Row s={{ hide: false }}>
                     <ToggleButton
                       prefixIcon="gallery"
                       href="/gallery"
